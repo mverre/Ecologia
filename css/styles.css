@@ -6,7 +6,7 @@ html {
 	min-width:940px;
 }
 body {
-	background:url(images/tail-top.gif) repeat-x left top #fff;
+	background:url(../images/tail-top.gif) repeat-x left top #fff;
 	font-family:Tahoma, Arial, helvetica, sans-serif;
 	font-size:100%;
 	line-height:1em;
@@ -139,17 +139,17 @@ ul, ol {
 	color:#35b3d8;
 	cursor:pointer;
 	margin-top:-4px;
-	background:url(images/button-left1.png) no-repeat left top;
+	background:url(../images/button-left1.png) no-repeat left top;
 }
 #login-form .field1 a em {
 	display:inline-block;
 	padding:0 5px;
-	background:url(images/button-right1.png) no-repeat right top;
+	background:url(../images/button-right1.png) no-repeat right top;
 }
 #login-form .field1 a b {
 	font-style:normal;
 	display:inline-block;
-	background:url(images/button-tail1.png) repeat-x left top;
+	background:url(../images/button-tail1.png) repeat-x left top;
 	padding:4px 11px 4px 11px;
 }
 #login-form .field1 a span {
@@ -167,7 +167,7 @@ ul, ol {
 }
 #login-form ul li {
 	padding:0 0 6px 18px;
-	background:url(images/arrow1.gif) no-repeat left 5px;
+	background:url(../images/arrow1.gif) no-repeat left 5px;
 }
 #login-form ul li.last {
 	padding-bottom:0;
@@ -239,7 +239,7 @@ ul, ol {
 	margin-bottom:-14px;
 }
 .news li {
-	background:url(images/arrow1.gif) no-repeat left 5px;
+	background:url(../images/arrow1.gif) no-repeat left 5px;
 	padding:0 0 14px 18px;
 }
 .news li a {
@@ -261,7 +261,7 @@ ul, ol {
 .sitemap li {
 	padding:0 0 0 16px;
 	line-height:1.83em;
-	background:url(images/arrow.gif) no-repeat left 8px;
+	background:url(../images/arrow.gif) no-repeat left 8px;
 }
 .list {
 	margin-top:-14px;
@@ -348,16 +348,16 @@ h3 b, h4 b {
 	text-transform:uppercase;
 	display:inline-block;
 	cursor:pointer;
-	background:url(images/button-left.png) no-repeat left top;
+	background:url(../images/button-left.png) no-repeat left top;
 }
 .link1 em {
 	display:inline-block;
 	padding:0 5px;
-	background:url(images/button-right.png) no-repeat right top;
+	background:url(../images/button-right.png) no-repeat right top;
 }
 .link1 b {
 	display:inline-block;
-	background:url(images/button-tail.gif) repeat-x left top;
+	background:url(../images/button-tail.gif) repeat-x left top;
 	padding:3px 9px 4px 9px;
 }
 .box {
@@ -366,23 +366,23 @@ h3 b, h4 b {
 	margin-bottom:20px;
 }
 .box .border-bot {
-	background:url(images/border-bot.gif) repeat-x left bottom;
+	background:url(../images/border-bot.gif) repeat-x left bottom;
 }
 .box .left-bot-corner {
-	background:url(images/left-bot-corner.gif) no-repeat left bottom;
+	background:url(../images/left-bot-corner.gif) no-repeat left bottom;
 }
 .box .right-bot-corner {
-	background:url(images/right-bot-corner.gif) no-repeat right bottom;
+	background:url(../images/right-bot-corner.gif) no-repeat right bottom;
 }
 .box .inner {
 	padding:0 0 10px 21px;
 }
 .box1 {
 	width:263px;
-	background:url(images/box1-bot.jpg) no-repeat left bottom;
+	background:url(../images/box1-bot.jpg) no-repeat left bottom;
 }
 .box1.alt {
-	background:url(images/box1-bot1.jpg) no-repeat left bottom;
+	background:url(../images/box1-bot1.jpg) no-repeat left bottom;
 	width:900px;
 }
 .box1 .inner {
@@ -393,13 +393,13 @@ h3 b, h4 b {
 	background-color:#176ac7;
 }
 .box2 .border-top {
-	background:url(images/border-top.gif) repeat-x left top;
+	background:url(../images/border-top.gif) repeat-x left top;
 }
 .box2 .left-top-corner {
-	background:url(images/left-top-corner.gif) no-repeat left top;
+	background:url(../images/left-top-corner.gif) no-repeat left top;
 }
 .box2 .right-top-corner {
-	background:url(images/right-top-corner.gif) no-repeat right top;
+	background:url(../images/right-top-corner.gif) no-repeat right top;
 }
 .box2 .inner {
 	padding:12px 48px 25px 32px;
@@ -415,13 +415,13 @@ h3 b, h4 b {
 .box3 {
 	width:100%;
 	border-top:2px solid #3593da;
-	background:url(images/border-top1.gif) repeat-x left top #176ac7;
+	background:url(../images/border-top1.gif) repeat-x left top #176ac7;
 }
 .box3 .right-bot-corner {
-	background:url(images/right-bot-corner1.gif) no-repeat right bottom;
+	background:url(../images/right-bot-corner1.gif) no-repeat right bottom;
 }
 .box3 .left-bot-corner {
-	background:url(images/left-bot-corner1.gif) no-repeat left bottom;
+	background:url(../images/left-bot-corner1.gif) no-repeat left bottom;
 }
 .box3 .inner {
 	padding:7px 49px 36px 48px;
@@ -451,25 +451,25 @@ h3 b, h4 b {
 	padding-left:23px;
 }
 #header .row-2 {
-	background:url(images/nav-tail.gif) repeat-x left top;
+	background:url(../images/nav-tail.gif) repeat-x left top;
 	margin-bottom:-3px;
 	position:relative;
 }
 #header .row-2 .left {
-	background:url(images/nav-left.gif) no-repeat left top;
+	background:url(../images/nav-left.gif) no-repeat left top;
 }
 #header .row-2 ul {
 	height:58px;
 	width:100%;
 	overflow:hidden;
-	background:url(images/nav-right.gif) no-repeat right top;
+	background:url(../images/nav-right.gif) no-repeat right top;
 }
 #header .row-2 ul li {
 	float:left;
 	text-transform:uppercase;
 	font-size:16px;
 	line-height:1.2em;
-	background:url(images/divider.gif) no-repeat right 4px;
+	background:url(../images/divider.gif) no-repeat right 4px;
 	padding:4px 2px 0 0;
 }
 #header .row-2 ul li.last {
@@ -487,7 +487,7 @@ h3 b, h4 b {
 	display:block;
 	padding:14px 0 0 0;
 	cursor:pointer;
-	background:url(images/spacer.gif);
+	background:url(../images/spacer.gif);
 }
 #header .row-2 ul li a span {
 	display:block;
@@ -495,15 +495,15 @@ h3 b, h4 b {
     color:black;
 }
 #header .row-2 ul li a:hover, #header .row-2 ul li a.active {
-	background:url(images/nav-act.png) repeat-x left top;
+	background:url(../images/nav-act.png) repeat-x left top;
 }
 #header .row-2 ul li a:hover span, #header .row-2 ul li a.active span {
-	background:url(images/nav-arrow.gif) no-repeat center bottom;
+	background:url(../images/nav-arrow.gif) no-repeat center bottom;
 }
 #header .row-3 {
 	height:276px;
 	overflow:hidden;
-	background:url(images/header-tail.gif) repeat-x left top;
+	background:url(../images/header-tail.gif) repeat-x left top;
 }
 #header .row-3 .inside {
 	padding:35px 0 0 50px;
@@ -539,16 +539,16 @@ h3 b, h4 b {
 	padding:0 0 0 49px;
 }
 #footer .footer-nav {
-	background:url(images/footer-nav-tail.gif) repeat-x left top;
+	background:url(../images/footer-nav-tail.gif) repeat-x left top;
 }
 #footer .footer-nav .left {
-	background:url(images/footer-nav-left.gif) no-repeat left top;
+	background:url(../images/footer-nav-left.gif) no-repeat left top;
 }
 #footer .footer-nav ul {
 	width:100%;
 	overflow:hidden;
 	padding:15px 0 16px 0;
-	background:url(images/footer-nav-right.gif) no-repeat right top;
+	background:url(../images/footer-nav-right.gif) no-repeat right top;
 }
 #footer .footer-nav ul li {
 	float:left;
@@ -565,7 +565,7 @@ h3 b, h4 b {
 	color:#fff;
 }
 #footer .footerlink {
-	background:url(images/footer-tail.gif) repeat-x left top #000;
+	background:url(../images/footer-tail.gif) repeat-x left top #000;
 	color:#fff;
 	line-height:1.67em;
 	padding:18px 25px 23px 25px;
