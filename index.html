@@ -7,28 +7,28 @@
     </head>
     <body>
         <div id="main">
-          <div id="header">
-            <div class="bann">
-              <div class="logo"><a href="index.html"><img src="images/banner.png" alt="" /></a></div>
+            <div id="header">
+                <div class="bann">
+                    <div class="logo"><a href="index.html"><img src="images/banner.png" alt="" /></a></div>
+                </div>
+                <div class="nav">
+                    <div class="left">
+                        <ul>
+                            <li><a href="index.html" class="active"><span>Accueil</span></a></li>
+                            <li><a href="plantes.html"><span>Plantes</span></a></li>
+                            <li><a href="calendrier.html"><span>Calendrier</span></a></li>
+                            <li><a href="conseils.html"><span>Conseils</span></a></li>
+                            <li class="last"><a href="forum.html"><span>Forum</span></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="nav">
-              <div class="left">
-                <ul>
-                  <li><a href="index.html" class="active"><span>Accueil</span></a></li>
-                  <li><a href="plantes.html"><span>Plantes</span></a></li>
-                  <li><a href="calendrier.html"><span>Calendrier</span></a></li>
-                  <li><a href="conseils.html"><span>Conseils</span></a></li>
-                  <li class="last"><a href="forum.html"><span>Forum</span></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        
-          <div id="templatemo_banner">
+        </div>
+
+        <div id="slider">
             <div id="one" class="contentslider">
                 <div class="cs_wrapper">
                     <div class="cs_slider">
-
                         <div class="cs_article">
                             <a href="#">
                             <img src="images/article01.jpg" alt="Artist's interpretation of article headline" />
@@ -78,24 +78,37 @@
                         </div><!-- End cs_article -->
 
                         <div class="cs_article">
-                            <a href="#">
-                            <img src="images/article04.jpg" alt="Artist's interpretation of article headline" />
-                            </a>
+                        <a href="#">
+                        <img src="images/article04.jpg" alt="Artist's interpretation of article headline" />
+                        </a>
 
-                            <div class="text">
-                                <h2> <a href="#">Project Four</a> </h2>
+                        <div class="text">
+                            <h2> <a href="#">Project Four</a> </h2>
 
-                                <p>
-                                Aliquam elit risi sapien dignissim nibh, ac vestibulum lorem urna in neque.
-                                </p>
+                            <p>
+                            Aliquam elit risi sapien dignissim nibh, ac vestibulum lorem urna in neque.
+                            </p>
 
-                                <a href="#">Read More</a>
-                            </div>
+                            <a href="#">Read More</a>
                         </div>
-
+                    </div>
                     </div>
                 </div>
-             </div>
-          </div>    
-    </body>
+            </div>
+        </div>  
+            
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="js/jquery.ennui.contentslider.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#one').ContentSlider({
+                    width : '940px',
+                    height : '300px',
+                    speed : 800,
+                    easing : 'easeInOutBack'
+                });
+            });
+        </script>
+    </bsody>
 </html>
