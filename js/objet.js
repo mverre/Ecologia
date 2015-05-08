@@ -1,4 +1,52 @@
+function AffichePlante(str) {
+    if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+            }
+        };
+        xmlhttp.open("GET", "test.php?q=  " + str, true);
+        xmlhttp.send();
+    }
+}
+
+
+
+function AfficheListe() {
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            document.getElementById("list").innerHTML = xmlhttp.responseText;
+        }
+    };
+    xmlhttp.open("GET", "select.php", true);
+    xmlhttp.send();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var LaPlante;
+
+
+
+
 
 PlanteSet = function () {
     "use strict";
