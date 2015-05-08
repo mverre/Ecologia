@@ -4,7 +4,7 @@
 </head>
 <body> 
 <select name="plante" onchange="AffichePlante(this.value)">
-  <option value="">hmhm</option>
+  <option value="">Pick a Plant</option>
 <?php
 $q = $_GET['q'];
     $bdd = mysqli_connect('localhost','root','','ecologia');

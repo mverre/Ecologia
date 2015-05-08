@@ -16,14 +16,14 @@ function AffichePlante(str) {
 
 
 
-function AfficheListe(str) {
+function AfficheListe(str,day,month) {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             document.getElementById("list").innerHTML = xmlhttp.responseText;
         }
     };
-    xmlhttp.open("GET", "select.php?q=" + str, true);
+    xmlhttp.open("GET", "select.php?q=" + str + "&amp;day=" + day + "&amp;month=" + month, true);
     xmlhttp.send();
 }
 
