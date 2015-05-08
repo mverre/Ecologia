@@ -1,0 +1,19 @@
+.onglets_contenu
+{
+
+}
+
+.onglet_affiche{
+    display:inline-block;
+}
+
+.onglet_cache{
+    display:none;
+}
+
+.onglets_bouttons
+{
+display:inline-block;
+border:1px solid black;
+cursor:pointer;
+}
