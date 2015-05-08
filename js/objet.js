@@ -86,3 +86,6 @@ plante = function (nom, type, saison, climat, imageURL, origine, description, da
     }    
 };*/
 
+var now = new Date();
+var dateActuelle = [now.getDate(),now.getMonth()+1];
+console.log(dateActuelle);
