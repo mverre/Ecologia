@@ -9,8 +9,14 @@
     </head>
     <body>
 <br>
+    <select name="plante" onchange="AfficheListe(this.value)">
+        <option value="nom">All</option>
+        <option value="printemps">Printemps</option>
+        <option value="ete">Été</option>
+        <option value="automne">Automne</option>
+        <option value="hiver">Hiver</option>
+    </select>
     <div id="list"><b>Nup Nup</b></div>
-    <button onclick="AfficheListe()">Beep</button>
     <div id="txtHint"><b>Nip Nup</b></div>
     </body>
     <script src="./js/objet.js"></script>
