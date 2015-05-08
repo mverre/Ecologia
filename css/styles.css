@@ -20,6 +20,10 @@ ul, ol {
 	font-size:0.75em;
 }
 
+body{
+    background:url('../images/arbre.jpg') repeat;
+}
+
 /*********************************************************************
 **********************        Header        **************************
 *********************************************************************/
@@ -33,6 +37,7 @@ ul, ol {
 
 #header .bann {
 	height:170px;
+    padding-bottom: 10px;
 }
 #header .bann .logo {
 	padding:20px 0 0 0px;
@@ -45,18 +50,18 @@ ul, ol {
 /* Barre de navigation */
 
 #header .nav {
-	background:url(../images/nav-tail.gif) repeat-x left top;
+    background:url(../images/nav-tail.png) repeat-x left top;
 	margin-bottom:-3px;
 	position:relative;
 }
 #header .nav .left {
-	background:url(../images/nav-left.gif) no-repeat left top;
+	background:url(../images/nav-left.png) no-repeat left top;
 }
 #header .nav ul {
-	height:58px;
+	height:56px;
 	width:100%;
 	overflow:hidden;
-	background:url(../images/nav-right.gif) no-repeat right top;
+	background:url(../images/nav-right.png) no-repeat right top;
 }
 #header .nav ul li {
 	float:left;
@@ -79,7 +84,7 @@ ul, ol {
 	width:186px;
 	text-align:center;
 	display:block;
-	padding:14px 0 0 0;
+	padding:12px 0 0 0;
 	cursor:pointer;
 	background:url(../images/spacer.gif);
 }
@@ -90,9 +95,6 @@ ul, ol {
 }
 #header .nav ul li a:hover, #header .nav ul li a.active {
 	background:url(../images/nav-act.png) repeat-x left top;
-}
-#header .nav ul li a:hover span, #header .nav ul li a.active span {
-	background:url(../images/nav-arrow.gif) no-repeat center bottom;
 }
 
 /*********************************************************************
