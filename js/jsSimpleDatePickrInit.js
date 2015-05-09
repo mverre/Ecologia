@@ -96,7 +96,7 @@ function calClick(dateStr, id){
 	if(parseInt(dateArr[1], 10)<10) dateArr[1] = '0'+dateArr[1];
 	field = document.getElementById(jsSDPObj[id][1]);
 	field.value = dateArr[0]+'/'+dateArr[1]+'/'+dateArr[2];
-	document.getElementById('calendarWrap'+id).style.display = "none";
+	//document.getElementById('calendarWrap'+id).style.display = "none";
     console.log([dateArr[0],dateArr[1]]);
     
     xmlhttp = new XMLHttpRequest();
@@ -104,10 +104,14 @@ function calClick(dateStr, id){
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             //Gérer la réponse :
             //console.log(xmlhttp.responseText);
-            var elt = document.createElement("ul");
-            elt.setAttribute("id","information");
-            elt.innerHTML=xmlhttp.responseText;
-            document.getElementById("calendarMain").appendChild(elt);
+            if(document.getElementById("information")==undefined){
+                var elt = document.createElement("ul");
+                elt.setAttribute("id","information");
+                //document.getElementById("calendarMain").appendChild(elt);
+                document.getElementById("calendarMain").insertBefore(elt,document.getElementById("calendarMain").firstChild);
+            }
+            document.getElementById("information").innerHTML=xmlhttp.responseText;
+            //window.scrollBy(document.getElementById("calendarWrap0").height,0);
         }
     };
     xmlhttp.open("GET", "./js/calendrier.php?q=" + dateArr[0] + "/" + dateArr[1], true);
