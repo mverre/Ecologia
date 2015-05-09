@@ -144,3 +144,9 @@ td a {
     margin-left: 35%;
     margin-top: 5%;
 }
+
+a:link, a:visited {
+    color: #e18814;
+    font-weight: bold;
+    text-decoration: none;
+}
