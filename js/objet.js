@@ -10,7 +10,7 @@ function AffichePlante(str) {
                 document.getElementById("txtHint").style.display = "block";
             }
         };
-        xmlhttp.open("GET", "test.php?q=  " + str, true);
+        xmlhttp.open("GET", "affPlante.php?q=  " + str, true);
         xmlhttp.send();
     }
         document.getElementById("plantes").style.display = "none";
