@@ -16,18 +16,22 @@ function AffichePlante(str) {
         document.getElementById("plantes").style.display = "none";
 }
 
-function AffichePlanteNom() {
-    NomPlante = document.getElementById("Recherche").value;
-    xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            document.getElementById("txtHint").innerHTML = xmlhttp.responseText + "<button onclick='RetourPlante()'>Retour</button>";
-            document.getElementById("txtHint").style.display = "block";
-        }
-    };
-    xmlhttp.open("GET", "affNom.php?q=" + NomPlante , true);
-    xmlhttp.send();
-    document.getElementById("plantes").style.display = "none";
+function AffichePlante2(str) {
+    if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("txtHint").innerHTML = xmlhttp.responseText + "<button onclick='RetourPlante2()'>Retour</button>";
+                document.getElementById("txtHint").style.display = "block";
+            }
+        };
+        xmlhttp.open("GET", "affPlantes.php?q=  " + str, true);
+        xmlhttp.send();
+    }
+        document.getElementById("calendarID").style.display = "none";
 }
 
 function AfficheListe(str,day,month,type,climat) {
@@ -67,6 +71,11 @@ function VSelectC() {
 function RetourPlante(){
     document.getElementById("txtHint").style.display = "none";
     document.getElementById("plantes").style.display = "inline";
+}
+
+function RetourPlante2(){
+    document.getElementById("txtHint").style.display = "none";
+    document.getElementById("calendarID").style.display = "inline";
 }
 
 /*
