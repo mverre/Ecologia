@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Sam 09 Mai 2015 à 13:19
+-- Généré le :  Sam 09 Mai 2015 à 16:29
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -27,8 +27,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `jours` (
-  `numero` int(2) NOT NULL,
-  `mois` int(2) NOT NULL,
+  `numero` varchar(2) NOT NULL,
+  `mois` varchar(2) NOT NULL,
   `etat_lunaire` varchar(50) DEFAULT NULL,
   `type_plante` varchar(50) DEFAULT NULL,
   `instruction` varchar(100) DEFAULT NULL,
@@ -42,14 +42,14 @@ CREATE TABLE IF NOT EXISTS `jours` (
 --
 
 INSERT INTO `jours` (`numero`, `mois`, `etat_lunaire`, `type_plante`, `instruction`, `plante_liee`) VALUES
-(9, 5, 'Lune ascendante', 'Fruit', 'Essayez le semis de melon', 18),
-(10, 5, 'Lune ascendante', 'Racine', 'Semis de betterave.', 13),
-(11, 5, 'Dernier quartier', 'Racine', 'Semez des radis pour échelonner les récoltes.', 19),
-(12, 5, 'Lune ascendante', 'Fleur', 'Si vous aimez sa saveur marquée, semez de la roquette.', 20),
-(13, 5, 'Lune ascendante', 'Feuille', 'A découvrir et à semer : la tétragone.', 21),
-(14, 5, 'Lune ascendante', 'Feuille', 'Noeud lunaire. Semez des cardons.', 22),
-(15, 5, 'Lune ascendante', 'Feuille', 'Lune en périgée.', NULL),
-(16, 5, 'Lune ascendante', 'Feuille', 'Semez le fenouil.', 23);
+('09', '05', 'Lune ascendante', 'Fruit', 'Essayez le semis de melon.', 18),
+('10', '05', 'Lune ascendante', 'Racine', 'Semis de betterave.', 13),
+('11', '05', 'Dernier quartier', 'Racine', 'Semez des radis pour échelonner les récoltes.', 19),
+('12', '05', 'Lune ascendante', 'Fleur', 'Si vous aimez sa saveur marquée, semez de la roquette.', 20),
+('13', '05', 'Lune ascendante', 'Feuille', 'A découvrir et à semer : la tétragone.', 21),
+('14', '05', 'Lune ascendante', 'Feuille', 'Noeud lunaire. Semez des cardons.', 22),
+('15', '05', 'Lune ascendante', 'Feuille', 'Lune en périgée.', NULL),
+('16', '05', 'Lune ascendante', 'Feuille', 'Semez le fenouil.', 23);
 
 -- --------------------------------------------------------
 
