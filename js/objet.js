@@ -6,12 +6,14 @@ function AffichePlante(str) {
         xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+                document.getElementById("txtHint").innerHTML = xmlhttp.responseText + "<button onclick='RetourPlante()'>Retour</button>";
+                document.getElementById("txtHint").style.display = "block";
             }
         };
         xmlhttp.open("GET", "test.php?q=  " + str, true);
         xmlhttp.send();
     }
+        document.getElementById("plantes").style.display = "none";
 }
 
 
@@ -48,6 +50,11 @@ function VSelectC() {
     choice = select.selectedIndex;  // Récupération de l'index du <option> choisi
 
     return select.options[choice].value; // Récupération du texte du <option> d'index "choice"
+}
+
+function RetourPlante(){
+    document.getElementById("txtHint").style.display = "none";
+    document.getElementById("plantes").style.display = "inline";
 }
 
 /*

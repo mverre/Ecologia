@@ -39,14 +39,16 @@
 
                         while($row = mysqli_fetch_array($result)) {
                             echo "<li>
-                                    <img src=".$row['Image'].">
+                                    <img onclick='AffichePlante(".$row['id'].")' src=".$row['Image'].">
                                     <h3>".$row['Nom']."</h3>
                                     <p>".$row['Description']."</p>
                                   </li>";
                         }
                     ?>                   
                 </ul>
-            </div>    
+            </div>
+            <div id="txtHint">beep</div>
         </div>
     </body>
+    <script src="./js/objet.js"></script>
 </html>
