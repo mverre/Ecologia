@@ -11,13 +11,24 @@ $sEx = explode('/', $s);
 $q = $sEx[0];
 $day = $sEx[1];
 $month = $sEx[2];
+$type = $sEx[3];
 
     $bdd = mysqli_connect('localhost','root','','ecologia');
 if ($q == "nom" || $q == "conseil"){
-    $sql="SELECT * FROM Plante";  
-} 
+    if ($type == "nom"){
+        $sql="SELECT * FROM Plante";
+    }
+    else {
+        $sql="SELECT * FROM Plante where Type='".$type."'";
+    } 
+}
 else {
-    $sql="SELECT * FROM Plante WHERE Saison='".$q."'";
+    if ($type == "nom"){
+        $sql="SELECT * FROM Plante WHERE Saison='".$q."'";
+    }
+    else {
+        $sql="SELECT * FROM Plante WHERE Saison='".$q."' and Type='".$type."'";
+    }
 }
 $result = mysqli_query($bdd,$sql);
 while($row = mysqli_fetch_array($result)) {

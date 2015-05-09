@@ -9,7 +9,7 @@
     </head>
     <body>
 <br>
-    <select name="plante" onchange="AfficheListe(this.value,dateActuelle[0],dateActuelle[1])">
+    <select id="saison" name="plante">
         <option value="nom">All</option>
         <option value="printemps">Printemps</option>
         <option value="ete">Été</option>
@@ -17,6 +17,13 @@
         <option value="hiver">Hiver</option>
         <option value="conseil">Conseil</option>
     </select>  
+    <select id="type" name="fleur">
+        <option value="nom">All</option>
+        <option value="fleur">Fleur</option>
+        <option value="legume">Legume</option>
+        <option value="fruit">Fruit</option>
+    </select>  
+        <br> <button onclick="AfficheListe(VSelectS(),dateActuelle[0],dateActuelle[1],VSelectT())"> Affiche</button>
     <div id="list"><b>Nup Nup</b></div>
     <div id="txtHint"><b>Nip Nup</b></div>
     </body>

@@ -16,20 +16,33 @@ function AffichePlante(str) {
 
 
 
-function AfficheListe(str,day,month) {
+function AfficheListe(str,day,month,type) {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             document.getElementById("list").innerHTML = xmlhttp.responseText;
         }
     };
-    xmlhttp.open("GET", "select.php?q=" + str + "/" + day + "/" +month, true);
+    xmlhttp.open("GET", "select.php?q=" + str + "/" + day + "/" +month + "/" + type, true);
     xmlhttp.send();
 }
 
 
 
+function VSelectS() {
+select = document.getElementById("saison");
+choice = select.selectedIndex  // Récupération de l'index du <option> choisi
+ 
+return select.options[choice].value; // Récupération du texte du <option> d'index "choice"
+}
 
+
+function VSelectT() {
+select = document.getElementById("type");
+choice = select.selectedIndex  // Récupération de l'index du <option> choisi
+ 
+return select.options[choice].value; // Récupération du texte du <option> d'index "choice"
+}
 
 
 
