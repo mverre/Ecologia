@@ -7,6 +7,7 @@
         <link href="css/calendrier.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="js/jsSimpleDatePickr.js"></script>
         <script type="text/javascript" src="js/jsSimpleDatePickrInit.js"></script>
+        <script type="text/javascript" src="js/objet.js"></script>
     </head>
     <body id="page4">
         <div id="main">
@@ -26,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <div class="calendar">        
+            <div class="calendar" id="calendarID">        
                 <p>Date : <input type="text" value="" name="date" id="champ_date" size="12" maxlength="10"></p>
                 <div id="calendarMain"></div>
                 <script type="text/javascript">
@@ -36,6 +37,7 @@
                 //]]>
                 </script>
                 </div>
+            <div id="txtHint"></div>
         </div>
     </body>
 </html>
