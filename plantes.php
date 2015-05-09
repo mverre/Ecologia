@@ -15,7 +15,7 @@
                     <div class="left">
                         <ul>
                             <li><a href="index.html"><span>Accueil</span></a></li>
-                            <li><a href="plantes.html" class="active"><span>Plantes</span></a></li>
+                            <li><a href="plantes.php" class="active"><span>Plantes</span></a></li>
                             <li><a href="calendrier.html"><span>Calendrier</span></a></li>
                             <li><a href="conseils.html"><span>Conseils</span></a></li>
                             <li class="last"><a href="forum.html"><span>Forum</span></a></li>
@@ -27,36 +27,26 @@
                 <input type="text" placeholder="Chercher une plante !" required>
                 <button type="submit">Search</button>
             </form>   
+            
             <div id="plantes">
                 <ul>
-                    <li>
-                        <img src="images/fleur1.jpg">
-                        <h3>Headline</h3>
-                        <p>Lorem ipsum dolor sit amet...</p>
-                    </li>
+                    <?php
+                        $bdd = mysqli_connect('localhost','root','','ecologia');
 
-                    <li>
-                        <img src="images/fleur2.jpg">
-                        <h3>Headline</h3>
-                        <p>Lorem ipsum dolor sit amet...</p>
-                    </li>
+                        $sql="SELECT * FROM plante";
+                        
+                        $result = mysqli_query($bdd,$sql);
 
-                    <li>
-                        <img src="images/fleur3.jpg">
-                        <h3>Headline</h3>
-                        <p>Lorem ipsum dolor sit amet...</p>
-                    </li>
-
-                    <li>
-                        <img src="images/fleur4.jpg">
-                        <h3>Headline</h3>
-                        <p>Lorem ipsum dolor sit amet...</p>
-                    </li>
+                        while($row = mysqli_fetch_array($result)) {
+                            echo "<li>
+                                    <img src=".$row['Image'].">
+                                    <h3>".$row['Nom']."</h3>
+                                    <p>".$row['Description']."</p>
+                                  </li>";
+                        }
+                    ?>                   
                 </ul>
-            </div>
+            </div>    
         </div>
-        
-        
-        
     </body>
 </html>
