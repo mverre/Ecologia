@@ -370,7 +370,7 @@ td a {
  
 #plantes ul {
   list-style-type: none;
-  width: 500px;
+  width: 800px;
   margin : auto;
 }
  
@@ -380,7 +380,8 @@ td a {
  
 #plantes li {
   padding: 10px;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
+  height:200px;
   overflow: auto;
   background: url(../images/item.png) no-repeat;
   margin: 0px auto;
@@ -472,12 +473,12 @@ Barre de recherche
 }   
    
 .form-wrapper button:hover{     
-    background: #e54040;
+    background: #90BDF1;
 }   
    
 .form-wrapper button:active,
 .form-wrapper button:focus{   
-    background: #c42f2f;
+    background: #4E9CF7;
     outline: 0;   
 }
  
@@ -486,18 +487,18 @@ Barre de recherche
     position: absolute;
     border-width: 8px 8px 8px 0;
     border-style: solid solid solid none;
-    border-color: transparent #d83c3c transparent;
+    border-color: transparent #4E9CF7 transparent;
     top: 12px;
     left: -6px;
 }
  
 .form-wrapper button:hover:before{
-    border-right-color: #e54040;
+    border-right-color: #90BDF1;
 }
  
 .form-wrapper button:focus:before,
 .form-wrapper button:active:before{
-        border-right-color: #c42f2f;
+        border-right-color: #4E9CF7;
 }      
  
 .form-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
