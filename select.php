@@ -14,9 +14,9 @@ $month = $sEx[2];
 $type = $sEx[3];
 $climat = $sEx[4];
 $bdd = mysqli_connect('localhost','root','','ecologia');
-if ($climat == "nom"){
-    if ($q == "nom" || $q == "conseil"){
-        if ($type == "nom"){
+if ($climat == "tout"){
+    if ($q == "tout" || $q == "conseil"){
+        if ($type == "tout"){
             $sql="SELECT * FROM Plante";
         }
         else {
@@ -24,7 +24,7 @@ if ($climat == "nom"){
         } 
     }
     else {
-        if ($type == "nom"){
+        if ($type == "tout"){
             $sql="SELECT * FROM Plante WHERE Saison='".$q."'";
         }
         else {
@@ -33,8 +33,8 @@ if ($climat == "nom"){
     }
 }
 else {
-    if ($q == "nom" || $q == "conseil"){
-        if ($type == "nom"){
+    if ($q == "tout" || $q == "conseil"){
+        if ($type == "tout"){
             $sql="SELECT * FROM Plante where Climat='".$climat."'";
         }
         else {
@@ -42,7 +42,7 @@ else {
         } 
     }
     else {
-        if ($type == "nom"){
+        if ($type == "tout"){
             $sql="SELECT * FROM Plante WHERE Saison='".$q."'and Climat='".$climat."'";
         }
         else {
@@ -53,7 +53,6 @@ else {
 $result = mysqli_query($bdd,$sql);
 while($row = mysqli_fetch_array($result)) {
     if($q == 'conseil'){
-        echo "meep";
         $datedebut = explode('/',$row['DateDebut']);
         $datefin = explode('/',$row['DateFin']);
         if (($datedebut[1]>$datefin[1] && ($datedebut[1]<$month || $datefin[1]>$month)) ||($datedebut[1]<$datefin[1] && $datedebut[1]<$month && $datefin[1]>$month) || ($datedebut[1]==$month && $datedebut[0]<=$day) || ($datefin[1]==$month && $datefin[0]>=$day)){
