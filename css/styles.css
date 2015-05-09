@@ -300,3 +300,62 @@ p {
   position:relative;
   margin:0;
 }
+
+
+/*
+ ******************************************************************************
+ * Menu Flottant
+ ******************************************************************************
+ */
+
+#menu_flottant{
+    top: 14em;
+    height: auto;
+    width: 20em;
+    border:0.1em solid black;
+    position:fixed;
+}
+
+#menu_flottant a{
+    margin-left:10%;
+}
+
+/*
+ ******************************************************************************
+ * Calendrier
+ ******************************************************************************
+ */
+.calendar p{
+    margin-left:50%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+.calendar div div ul li {
+    display: inline;
+}
+
+
+.calendar div div ul {
+    margin-left:50%;
+}
+
+
+table {
+    width: 100%;
+    padding-top: 2%;
+}
+
+th {
+    color:red;
+}
+
+td {
+    background-color: white;
+    height: 5em;
+}
+
+td a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
