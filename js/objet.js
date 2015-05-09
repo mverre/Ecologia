@@ -30,29 +30,42 @@ function AfficheListe(str,day,month,type,climat) {
 
 
 function VSelectS() {
-select = document.getElementById("saison");
-choice = select.selectedIndex  // Récupération de l'index du <option> choisi
+    select = document.getElementById("saison");
+    choice = select.selectedIndex;  // Récupération de l'index du <option> choisi
  
-return select.options[choice].value; // Récupération du texte du <option> d'index "choice"
+    return select.options[choice].value; // Récupération du texte du <option> d'index "choice"
 }
 
 function VSelectT() {
-select = document.getElementById("type");
-choice = select.selectedIndex  // Récupération de l'index du <option> choisi
- 
-return select.options[choice].value; // Récupération du texte du <option> d'index "choice"
+    select = document.getElementById("type");
+    choice = select.selectedIndex;  // Récupération de l'index du <option> choisi
+
+    return select.options[choice].value; // Récupération du texte du <option> d'index "choice"
 }
 
 function VSelectC() {
-select = document.getElementById("climat");
-choice = select.selectedIndex  // Récupération de l'index du <option> choisi
- 
-return select.options[choice].value; // Récupération du texte du <option> d'index "choice"
+    select = document.getElementById("climat");
+    choice = select.selectedIndex;  // Récupération de l'index du <option> choisi
+
+    return select.options[choice].value; // Récupération du texte du <option> d'index "choice"
 }
 
-
-
-
+/*
+function InsertPlante () {
+    xmlhttp = new XMLHttpRequest();
+    nom = document.getElementById("txtNom").value;
+    typ = document.getElementById("txtType").value;
+    sai = document.getElementById("txtSaison").value;
+    cli = document.getElementById("txtClimat").value;
+    im = document.getElementById("txtImage").value;
+    ori = document.getElementById("txtOrigine").value;
+    desc = document.getElementById("txtDescription").value;
+    deb = document.getElementById("txtDebut").value;
+    fin = document.getElementById("txtFin").value;
+    xmlhttp.open("GET", "insert.php?q=" + nom + "zzz" + typ + "zzz" + sai + "zzz" + cli + "zzz" + im + "zzz" + ori + "zzz" + desc + "zzz" + deb + "zzz" + fin, true);
+    xmlhttp.send();
+}
+*/
 
 
 
