@@ -38,8 +38,10 @@ p {
  * required in order to get the text to display properly.
  */
 .cs_article h2 {
+  margin-top:10px;
+  margin-bottom:10px;
   font-size:200%;
-  line-height:1.125em;
+  line-height:2.125em;
 }
 .cs_article h2 a {
     color:#333;
@@ -88,7 +90,7 @@ p {
  */
 .cs_article h2 {
   font-size:200%;
-  line-height:1.125em;
+  line-height:2.125em;
 }
 .cs_article h2 a {
     color:#333;
