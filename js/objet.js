@@ -23,7 +23,7 @@ function AfficheListe(str,day,month) {
             document.getElementById("list").innerHTML = xmlhttp.responseText;
         }
     };
-    xmlhttp.open("GET", "select.php?q=" + str + "&amp;day=" + day + "&amp;month=" + month, true);
+    xmlhttp.open("GET", "select.php?q=" + str + "/" + day + "/" +month, true);
     xmlhttp.send();
 }
 
