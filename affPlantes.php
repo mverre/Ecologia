@@ -4,7 +4,7 @@
 </head>
 <body>    
 <?php
-$q = intval($_GET['q']);
+$q = intval($_GET['q']); 
 $bdd = mysqli_connect('localhost','root','','ecologia');
 $sql="SELECT * FROM Plante WHERE id = '".$q."'";
 $result = mysqli_query($bdd,$sql);
