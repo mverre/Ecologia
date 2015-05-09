@@ -258,7 +258,7 @@ p {
 .cs_article img {
 	float: left;
 	margin-left: 60px;
-	border: 10px solid #2c385a;
+	border: 10px solid #98A92C;
 }
 
 .cs_article .text {
@@ -268,12 +268,12 @@ p {
 }
 
 .text h2 a, a:hover, a:visited{
-	color: #ee9016;
+	color: #E9B938;
 	font-weight: bold;
 }
 
 .cs_article p {
-	font-size: 11px;
+	font-size: 20px;
 }
 
 .cs_article .readmore {
@@ -281,7 +281,7 @@ p {
 }
 .cs_leftBtn, .cs_rightBtn {
   position:absolute;
-  top: 130px;
+  top: 145px;
   height:40px;
   padding:0;
   vertical-align: middle;
@@ -300,6 +300,7 @@ p {
   position:relative;
   margin:0;
 }
+
 
 
 /*
