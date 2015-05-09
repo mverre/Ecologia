@@ -23,7 +23,12 @@
         <option value="legume">Legume</option>
         <option value="fruit">Fruit</option>
     </select>  
-        <br> <button onclick="AfficheListe(VSelectS(),dateActuelle[0],dateActuelle[1],VSelectT())"> Affiche</button>
+    <select id="climat" name="chaud">
+        <option value="nom">All</option>
+        <option value="chaud">Chaud</option>
+        <option value="froid">Froid</option>
+    </select>  
+        <br> <button onclick="AfficheListe(VSelectS(),dateActuelle[0],dateActuelle[1],VSelectT(),VSelectC())"> Affiche</button>
     <div id="list"><b>Nup Nup</b></div>
     <div id="txtHint"><b>Nip Nup</b></div>
     </body>

@@ -12,22 +12,42 @@ $q = $sEx[0];
 $day = $sEx[1];
 $month = $sEx[2];
 $type = $sEx[3];
-
-    $bdd = mysqli_connect('localhost','root','','ecologia');
-if ($q == "nom" || $q == "conseil"){
-    if ($type == "nom"){
-        $sql="SELECT * FROM Plante";
+$climat = $sEx[4];
+$bdd = mysqli_connect('localhost','root','','ecologia');
+if ($climat == "nom"){
+    if ($q == "nom" || $q == "conseil"){
+        if ($type == "nom"){
+            $sql="SELECT * FROM Plante";
+        }
+        else {
+            $sql="SELECT * FROM Plante where Type='".$type."'";
+        } 
     }
     else {
-        $sql="SELECT * FROM Plante where Type='".$type."'";
-    } 
+        if ($type == "nom"){
+            $sql="SELECT * FROM Plante WHERE Saison='".$q."'";
+        }
+        else {
+            $sql="SELECT * FROM Plante WHERE Saison='".$q."' and Type='".$type."'";
+        }
+    }
 }
 else {
-    if ($type == "nom"){
-        $sql="SELECT * FROM Plante WHERE Saison='".$q."'";
+    if ($q == "nom" || $q == "conseil"){
+        if ($type == "nom"){
+            $sql="SELECT * FROM Plante where Climat='".$climat."'";
+        }
+        else {
+            $sql="SELECT * FROM Plante where Type='".$type."' and Climat='".$climat."'";
+        } 
     }
     else {
-        $sql="SELECT * FROM Plante WHERE Saison='".$q."' and Type='".$type."'";
+        if ($type == "nom"){
+            $sql="SELECT * FROM Plante WHERE Saison='".$q."'and Climat='".$climat."'";
+        }
+        else {
+            $sql="SELECT * FROM Plante WHERE Saison='".$q."' and Type='".$type."' and Climat='".$climat."'";
+        }
     }
 }
 $result = mysqli_query($bdd,$sql);

@@ -16,14 +16,14 @@ function AffichePlante(str) {
 
 
 
-function AfficheListe(str,day,month,type) {
+function AfficheListe(str,day,month,type,climat) {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             document.getElementById("list").innerHTML = xmlhttp.responseText;
         }
     };
-    xmlhttp.open("GET", "select.php?q=" + str + "/" + day + "/" +month + "/" + type, true);
+    xmlhttp.open("GET", "select.php?q=" + str + "/" + day + "/" +month + "/" + type + "/" + climat, true);
     xmlhttp.send();
 }
 
@@ -36,7 +36,6 @@ choice = select.selectedIndex  // Récupération de l'index du <option> choisi
 return select.options[choice].value; // Récupération du texte du <option> d'index "choice"
 }
 
-
 function VSelectT() {
 select = document.getElementById("type");
 choice = select.selectedIndex  // Récupération de l'index du <option> choisi
@@ -44,7 +43,12 @@ choice = select.selectedIndex  // Récupération de l'index du <option> choisi
 return select.options[choice].value; // Récupération du texte du <option> d'index "choice"
 }
 
-
+function VSelectC() {
+select = document.getElementById("climat");
+choice = select.selectedIndex  // Récupération de l'index du <option> choisi
+ 
+return select.options[choice].value; // Récupération du texte du <option> d'index "choice"
+}
 
 
 
