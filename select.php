@@ -56,7 +56,7 @@ while($row = mysqli_fetch_array($result)) {
         echo "meep";
         $datedebut = explode('/',$row['DateDebut']);
         $datefin = explode('/',$row['DateFin']);
-        if (($datedebut[1]<$month && $datefin[1]>$month) || ($datedebut[1]==$month && $datedebut[0]<=$day) || ($datefin[1]==$month && $datefin[0]>=$day)){
+        if (($datedebut[1]>$datefin[1] && ($datedebut[1]<$month || $datefin[1]>$month)) ||($datedebut[1]<$datefin[1] && $datedebut[1]<$month && $datefin[1]>$month) || ($datedebut[1]==$month && $datedebut[0]<=$day) || ($datefin[1]==$month && $datefin[0]>=$day)){
             echo "<option value=".$row['id'].">".$row['Nom']."</option>";
         }
     }
