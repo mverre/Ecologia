@@ -24,10 +24,10 @@
                     </div>
                 </div>
             </div>
-            <form class="form-wrapper cf">
-                <input type="text" placeholder="Chercher une plante !" required>
-                <button type="submit">Search</button>
-            </form>   
+            <div class="form-wrapper cf">
+                <input id="Recherche" type="text" placeholder="Chercher une plante !" required>
+                <button onclick='AffichePlanteNom()'>Search</button>
+            </div>   
             
             <div id="plantes">
                 <ul>
@@ -48,7 +48,7 @@
                     ?>                   
                 </ul>
             </div>
-            <div id="txtHint"></div>
+            <div class="form-wrapper" id="txtHint"></div>
         </div>
     </body>
     <script src="./js/objet.js"></script>
