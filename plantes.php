@@ -48,7 +48,7 @@
                     ?>                   
                 </ul>
             </div>
-            <div id="txtHint">beep</div>
+            <div id="txtHint"></div>
         </div>
     </body>
     <script src="./js/objet.js"></script>
