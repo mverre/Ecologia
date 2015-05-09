@@ -324,39 +324,51 @@ p {
 /* ******************************************************************************
  * Calendrier
  ****************************************************************************** */
-.calendar p{
-    margin-left:50%;
+/*Zone d'affichage de la date.*/
+.calendar p{ 
+    margin-left:42%;
     margin-bottom: 1%;
     margin-top: 1%;
 }
+
+/*Affichage en ligne du choix du mois.*/
 .calendar div div ul li {
     display: inline;
 }
 
-
+/*Bloc de choix du mois (flèches + date)*/
 .calendar div div ul {
-    margin-left:50%;
+    margin-left:43%;
 }
 
-
+/*Tableau du calendrier*/
 table {
     width: 100%;
     padding-top: 2%;
 }
 
+/*Nom des colonnes du tableau*/
 th {
     color:red;
 }
 
+/*Cellules du tableau*/
 td {
     background-color: white;
     height: 5em;
 }
 
+/*Pour rendre possible le clic sur la cellule entière*/
 td a {
     display: block;
     width: 100%;
     height: 100%;
+}
+
+/*Une fois que le tableau a disparu, les informations du jour selectionne apparaissent.*/
+#information {
+    margin-left: 35%;
+    margin-top: 5%;
 }
 
 

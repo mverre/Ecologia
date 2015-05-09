@@ -98,6 +98,20 @@ function calClick(dateStr, id){
 	field.value = dateArr[0]+'/'+dateArr[1]+'/'+dateArr[2];
 	document.getElementById('calendarWrap'+id).style.display = "none";
     console.log([dateArr[0],dateArr[1]]);
+    
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            //Gérer la réponse :
+            //console.log(xmlhttp.responseText);
+            var elt = document.createElement("ul");
+            elt.setAttribute("id","information");
+            elt.innerHTML=xmlhttp.responseText;
+            document.getElementById("calendarMain").appendChild(elt);
+        }
+    };
+    xmlhttp.open("GET", "./js/calendrier.php?q=" + dateArr[0] + "/" + dateArr[1], true);
+    xmlhttp.send();
 }
 //
 // affiche le titre
