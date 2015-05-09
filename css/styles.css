@@ -321,11 +321,9 @@ p {
     margin-left:10%;
 }
 
-/*
- ******************************************************************************
+/* ******************************************************************************
  * Calendrier
- ******************************************************************************
- */
+ ****************************************************************************** */
 .calendar p{
     margin-left:50%;
     margin-bottom: 1%;
@@ -359,4 +357,47 @@ td a {
     display: block;
     width: 100%;
     height: 100%;
+}
+
+
+/* ******************************************************************************
+ * Liste plantes
+ ****************************************************************************** */
+
+#plantes {
+    position: relative;
+}
+ 
+#plantes ul {
+  list-style-type: none;
+  width: 500px;
+  margin : auto;
+}
+ 
+#plantes h3 {
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+ 
+#plantes li {
+  padding: 10px;
+  padding-bottom: 15px;
+  overflow: auto;
+  background: url(../images/item.png) no-repeat;
+  margin: 0px auto;
+}
+
+#plantes li img {
+  float: left;
+  margin: 0 15px 0 0;
+}
+ 
+#plantes li p {
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+}
+ 
+
+ 
+#plantes li:hover {
+  background: #eee;
+  cursor: pointer;
 }
