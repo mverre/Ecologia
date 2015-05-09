@@ -39,8 +39,8 @@
                         $result = mysqli_query($bdd,$sql);
 
                         while($row = mysqli_fetch_array($result)) {
-                            echo "<li>
-                                    <img onclick='AffichePlante(".$row['id'].")' src=".$row['Image'].">
+                            echo "<li onclick='AffichePlante(".$row['id'].")'>
+                                    <img src=".$row['Image'].">
                                     <h3>".$row['Nom']."</h3>
                                     <p>".$row['Description']."</p>
                                   </li>";
