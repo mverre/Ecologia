@@ -2,11 +2,10 @@
 <html>
 <head>
 </head>
-<body>    
-<?php
-$q = intval($_GET['q']);
+<body> <?php
+$q = $_GET['q'];
 $bdd = mysqli_connect('localhost','root','','ecologia');
-$sql="SELECT * FROM Plante WHERE id = '".$q."'";
+$sql="SELECT * FROM Plante WHERE Nom LIKE '%".$q."%'";
 $result = mysqli_query($bdd,$sql);
 while($row = mysqli_fetch_array($result)) {
     echo "<img src=".$row['Image']."><br>";
@@ -20,5 +19,7 @@ while($row = mysqli_fetch_array($result)) {
     echo "Date de fin : " . $row['DateFin'] . "<br>";
 }
 ?>
+  </select>
 </body>
 </html>
+
