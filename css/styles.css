@@ -302,6 +302,33 @@ p {
   margin:0;
 }
 
+/***************************************************************
+****************** Catégories conseil **************************
+***************************************************************/
+
+#categories {
+    position:relative;
+    height:500px;
+    width:940px;
+    display:block;
+}
+
+#materiel {
+    position: absolute;
+    height:100%;
+    width:50%;
+    left:10px;
+    background: url("../images/fond.png") no-repeat;
+}
+
+#conseils {
+    position: absolute;
+    height:100%;
+    width:50%;
+    right:-5px;
+   background: url("../images/fond.png") no-repeat;
+}
+
 
 
 /*
