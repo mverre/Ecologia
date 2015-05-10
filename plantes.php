@@ -6,7 +6,7 @@
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
         <link href="css/plantes.css" rel="stylesheet" type="text/css" />
     </head>
-    <body id="page2">
+    <body id="page2"  onload="AffList()">
         <div id="main">
             <div id="header">
                 <div class="bann">
@@ -27,45 +27,31 @@
             <div class="form-wrapper cf">
                 <input id="Recherche" type="text" placeholder="Chercher une plante !" required>
                 <button onclick='AffichePlanteNom()'>Search</button>
-    <select id="saison" name="plante">
-        <option value="tout">All</option>
-        <option value="printemps">Printemps</option>
-        <option value="ete">Été</option>
-        <option value="automne">Automne</option>
-        <option value="hiver">Hiver</option>
-        <option value="conseil">Plante du moment</option>
-    </select>  
-    <select id="type" name="fleur">
-        <option value="tout">All</option>
-        <option value="fleur">Fleur</option>
-        <option value="legume">Legume</option>
-        <option value="fruit">Fruit</option>
-        <option value="feuille">Feuille</option>
-    </select>  
-    <select id="climat" name="chaud">
-        <option value="tout">All</option>
-        <option value="chaud">Chaud</option>
-        <option value="tempere">Temepere</option>
-    </select>  
+                <select id="saison" name="plante">
+                    <option value="tout">All</option>
+                    <option value="printemps">Printemps</option>
+                    <option value="ete">Été</option>
+                    <option value="automne">Automne</option>
+                    <option value="hiver">Hiver</option>
+                    <option value="conseil">Plante du moment</option>
+                </select>  
+                <select id="type" name="fleur">
+                    <option value="tout">All</option>
+                    <option value="fleur">Fleur</option>
+                    <option value="legume">Legume</option>
+                    <option value="fruit">Fruit</option>
+                    <option value="feuille">Feuille</option>
+                </select>  
+                <select id="climat" name="chaud">
+                    <option value="tout">All</option>
+                    <option value="chaud">Chaud</option>
+                    <option value="tempere">Temepere</option>
+                </select>  
+                <button onclick='AffList()'>Retour</button>
             </div>   
             
             <div id="plantes">
-                <ul id="listaff">
-                    <?php
-                        $bdd = mysqli_connect('localhost','root','','ecologia');
-
-                        $sql="SELECT * FROM plante";
-                        
-                        $result = mysqli_query($bdd,$sql);
-
-                        while($row = mysqli_fetch_array($result)) {
-                            echo "<li onclick='AffichePlante(".$row['id'].")'>
-                                    <img style='width:200px; height:180px;' src=".$row['Image'].">
-                                    <h3>".$row['Nom']."</h3>
-                                    <p>".$row['Description']."</p>
-                                  </li>";
-                        }
-                    ?>                   
+                <ul id="listaff">                   
                 </ul>
             </div>
             <div class="form-wrapper" style="display:none;" id="txtHint"></div>

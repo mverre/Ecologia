@@ -4,7 +4,17 @@ function doKeyDown(e) {
         AffichePlanteNom();
 	}
 }
-
+function AffList (){
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            document.getElementById("listaff").innerHTML = xmlhttp.responseText;
+            document.getElementById("listaff").style.display = "block";
+        }
+    };
+    xmlhttp.open("GET", "affListe.php", true);
+    xmlhttp.send();
+}
 function AffichePlante(str) {
     if (str == "") {
         document.getElementById("txtHint").innerHTML = "";
