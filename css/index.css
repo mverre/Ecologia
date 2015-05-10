@@ -2,8 +2,8 @@
 **********************        Slider        **************************
 *********************************************************************/
 
-a:link, a:visited { color: #e18814; text-decoration: none; font-weight: bold;} 
-a:active, a:hover { color: #ffffff; } 
+# slider a:link, a:visited { color: #e18814; text-decoration: none; font-weight: bold;} 
+#slider a:active, a:hover { color: #ffffff; } 
 
 h3 {
 	font-size: 14px;
@@ -151,7 +151,7 @@ p {
 	width: 400px;
 }
 
-.text h2 a, a:hover, a:visited{
+.text h2 a, .text a:hover, .text a:visited{
 	color: #E9B938;
 	font-weight: bold;
 }
