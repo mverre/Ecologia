@@ -1,5 +1,5 @@
 
-function doKeyDown(e){ 
+function doKeyDown(e) {
     if (e.keyCode == 13) {
         AffichePlanteNom();
 	}
@@ -17,10 +17,10 @@ function AffichePlante(str) {
                 document.getElementById("txtHint").style.display = "block";
             }
         };
-        xmlhttp.open("GET", "affPlantes.php?q=  " + str, true);
+        xmlhttp.open("GET", "affPlantes.php?q=" + str, true);
         xmlhttp.send();
     }
-        document.getElementById("plantes").style.display = "none";
+    document.getElementById("plantes").style.display = "none";
 }
 
 function AffichePlante2(str) {
@@ -43,6 +43,9 @@ function AffichePlante2(str) {
 }
 
 function AffichePlanteNom() {
+    saison = VSelectS();
+    type = VSelectT();
+    climat = VSelectC();
     NomPlante = document.getElementById("Recherche").value;
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -51,19 +54,19 @@ function AffichePlanteNom() {
             document.getElementById("listaff").style.display = "block";
         }
     };
-    xmlhttp.open("GET", "affNom.php?q=" + NomPlante , true);
+    xmlhttp.open("GET", "affNom.php?q=" + NomPlante +  "/" + saison + "/" + type + "/" + climat + "/" + dateActuelle[0] + "/" + dateActuelle[1], true);
     xmlhttp.send();
     document.getElementById("txtHint").style.display = "none";
 }
 
-function AfficheListe(str,day,month,type,climat) {
+function AfficheListe(str, day, month, type, climat) {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             document.getElementById("list").innerHTML = xmlhttp.responseText;
         }
     };
-    xmlhttp.open("GET", "select.php?q=" + str + "/" + day + "/" +month + "/" + type + "/" + climat, true);
+    xmlhttp.open("GET", "select.php?q=" + str + "/" + day + "/" + month + "/" + type + "/" + climat, true);
     xmlhttp.send();
 }
 
@@ -90,12 +93,12 @@ function VSelectC() {
     return select.options[choice].value; // Récupération du texte du <option> d'index "choice"
 }
 
-function RetourPlante(){
+function RetourPlante() {
     document.getElementById("txtHint").style.display = "none";
     document.getElementById("plantes").style.display = "inline";
 }
 
-function RetourPlante2(){
+function RetourPlante2() {
     document.getElementById("requete").style.display = "none";
     document.getElementById("calendarID").style.display = "inline";
     document.getElementById("information").style.display = "block";
@@ -168,5 +171,5 @@ plante = function (nom, type, saison, climat, imageURL, origine, description, da
 };*/
 
 var now = new Date();
-var dateActuelle = [now.getDate(),now.getMonth()+1];
+var dateActuelle = [now.getDate(), now.getMonth() + 1];
 console.log(dateActuelle);
