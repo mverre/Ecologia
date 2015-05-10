@@ -48,13 +48,8 @@ function AffichePlanteNom() {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-<<<<<<< HEAD
             document.getElementById("listaff").innerHTML = xmlhttp.responseText;
             document.getElementById("listaff").style.display = "block";
-=======
-            document.getElementById("txtHint").innerHTML = xmlhttp.responseText + "<button onclick='RetourPlante()'>Retour</button>";
-            document.getElementById("txtHint").style.display = "block";
->>>>>>> origin/master
         }
     };
     xmlhttp.open("GET", "affNom.php?q=" + NomPlante , true);
