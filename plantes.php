@@ -24,7 +24,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-wrapper cf">
+            <div id="FormRech" class="form-wrapper cf">
                 <input id="Recherche" type="text" placeholder="Chercher une plante !" required>
                 <button onclick='AffichePlanteNom()'>Search</button>
                 <select id="saison" name="plante">
@@ -45,7 +45,7 @@
                 <select id="climat" name="chaud">
                     <option value="tout">Climat</option>
                     <option value="chaud">Chaud</option>
-                    <option value="tempere">Temepere</option>
+                    <option value="tempere">Tempere</option>
                 </select>  
                 <button onclick='AffList()'>Retour</button>
             </div>   

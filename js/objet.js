@@ -25,6 +25,7 @@ function AffichePlante(str) {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 document.getElementById("txtHint").innerHTML = xmlhttp.responseText + "<button onclick='RetourPlante()'>Retour</button>";
                 document.getElementById("txtHint").style.display = "block";
+                document.getElementById("FormRech").style.display = "none";
             }
         };
         xmlhttp.open("GET", "affPlantes.php?q=" + str, true);
@@ -106,6 +107,7 @@ function VSelectC() {
 function RetourPlante() {
     document.getElementById("txtHint").style.display = "none";
     document.getElementById("plantes").style.display = "inline";
+    document.getElementById("FormRech").style.display = "block";
 }
 
 function RetourPlante2() {
