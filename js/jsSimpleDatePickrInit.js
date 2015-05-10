@@ -129,4 +129,4 @@ function calShowTitle(id){
 // crÃ©e l'objet jsSimpleDatePickr
 var jsSDPObj = Array();
 var jsSDPId = 0;
-var jsSDPMonthName = ['Jan', 'FÃ©v', 'Mar', 'Avr', 'Mai', 'Jui', 'Jul', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec'];
+var jsSDPMonthName = ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Jui', 'Jul', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec'];
