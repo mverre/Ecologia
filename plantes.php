@@ -40,7 +40,11 @@
 
                         while($row = mysqli_fetch_array($result)) {
                             echo "<li onclick='AffichePlante(".$row['id'].")'>
+<<<<<<< HEAD
                                     <img style='width:200px;' src=".$row['Image'].">
+=======
+                                    <img style='width:200px; height:180px;' src=".$row['Image'].">
+>>>>>>> origin/master
                                     <h3>".$row['Nom']."</h3>
                                     <p>".$row['Description']."</p>
                                   </li>";
