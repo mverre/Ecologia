@@ -1,4 +1,3 @@
-document.getElementById("Recherche").addEventListener('keydown', doKeyDown, true);
 
 function doKeyDown(e){ 
     if (e.keyCode == 13) {

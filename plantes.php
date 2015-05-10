@@ -52,4 +52,5 @@
         </div>
     </body>
     <script src="./js/objet.js"></script>
+    <script>document.getElementById("Recherche").addEventListener('keydown', doKeyDown, true);</script>
 </html>
