@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Dim 10 Mai 2015 à 09:37
+-- Généré le :  Dim 10 Mai 2015 à 10:24
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -76,12 +76,6 @@ CREATE TABLE IF NOT EXISTS `plante` (
 --
 
 INSERT INTO `plante` (`id`, `Nom`, `Type`, `Saison`, `Climat`, `Image`, `Origine`, `Description`, `DateDebut`, `DateFin`) VALUES
-(1, 'Test', 'Test', 'Test', 'Test', './images/rose.jpg', 'Test', 'Test', '12/12', '12/02'),
-(2, 'Meep', 'Moop', 'Moop', 'Moop', './images/rose.jpg', 'Moop', 'Moop', 'Moop', 'Moop'),
-(3, 'Printonia', 'Fleurs', 'printemps', 'chaud', './images/rose.jpg', 'HackathonEnssat2015', 'La fleur des Gardens Of The Galaxy', '08/05', '10/05'),
-(4, 'Etonia', 'Fleurs', 'ete', 'chaud', './images/rose.jpg', 'HackathonEnssat2015', 'La fleur des Gardens Of The Galaxy', '08/05', '10/05'),
-(5, 'Autonia', 'Fleurs', 'automne', 'chaud', './images/rose.jpg', 'HackathonEnssat2015', 'La fleur des Gardens Of The Galaxy', '08/05', '10/05'),
-(6, 'Hitonia', 'Fleurs', 'hiver', 'chaud', './images/rose.jpg', 'HackathonEnssat2015', 'La fleur des Gardens Of The Galaxy', '08/05', '10/05'),
 (7, 'Aubergine', 'Legume', 'Printemps', 'Chaud', 'http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Solanum_melongena_26_08_2012_%281%29.JPG/640px-Solanum_melongena_26_08_2012_%281%29.JPG', 'Afrique du Nord et Moyen-Orient', 'L aubergine (Solanum melongena L.) est une plante potagere annuelle de la famille des Solanacees.', '01/06', '30/04'),
 (8, 'Chou-fleurs', 'Legume', 'Printemps', 'Tempere', 'http://upload.wikimedia.org/wikipedia/commons/7/7c/Cauliflower.jpg', 'Proche-orient', 'Le chou-fleur est une variete de chou de la famille des Brassicacees.', '15/03', '15/06'),
 (9, 'Abricot', 'Fruit', 'Ete', 'Chaud', 'http://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Apricot_tree.jpg/1024px-Apricot_tree.jpg', 'Chine', 'L''abricot est le fruit d''un arbre generalement de petite taille appele abricotier, de la famille des Rosaceae.', '01/06', '15/08'),
