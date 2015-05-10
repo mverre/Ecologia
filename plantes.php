@@ -28,7 +28,7 @@
                 <input id="Recherche" type="text" placeholder="Chercher une plante !" required>
                 <button onclick='AffichePlanteNom()'>Search</button>
                 <select id="saison" name="plante">
-                    <option value="tout">All</option>
+                    <option value="tout">Saison</option>
                     <option value="printemps">Printemps</option>
                     <option value="ete">Été</option>
                     <option value="automne">Automne</option>
@@ -36,14 +36,14 @@
                     <option value="conseil">Plante du moment</option>
                 </select>  
                 <select id="type" name="fleur">
-                    <option value="tout">All</option>
+                    <option value="tout">Type</option>
                     <option value="fleur">Fleur</option>
                     <option value="legume">Legume</option>
                     <option value="fruit">Fruit</option>
                     <option value="feuille">Feuille</option>
                 </select>  
                 <select id="climat" name="chaud">
-                    <option value="tout">All</option>
+                    <option value="tout">Climat</option>
                     <option value="chaud">Chaud</option>
                     <option value="tempere">Temepere</option>
                 </select>  
