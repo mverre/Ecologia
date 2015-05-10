@@ -37,7 +37,8 @@
 
  
 #plantes li:hover {
-  background: #6EEC7A;
+  background: url(../images/itemHover.png) no-repeat;
+  padding:20px;
   cursor: pointer;
 }
 
