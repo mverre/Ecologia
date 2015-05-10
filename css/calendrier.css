@@ -1,5 +1,4 @@
-/* ******************************************************************************
- * Calendrier CSS généré en partie via csstablegenerator
+/* ****************************************************************************** * Calendrier CSS généré via csstablegenerator
  ****************************************************************************** */
 
 .jsCalendar {
@@ -140,9 +139,8 @@ td a {
 }
 
 /*Une fois que le tableau a disparu, les informations du jour selectionne apparaissent.*/
-#information {
-    margin-left: 35%;
-    margin-top: 5%;
+#information li{
+    list-style-type: none;
 }
 
 a:link, a:visited {
@@ -150,3 +148,102 @@ a:link, a:visited {
     font-weight: bold;
     text-decoration: none;
 }
+
+/* Form wrapper styling */
+.form-wrapper {
+    width: 450px;
+    padding: 10px 10px 50px 10px;
+    margin: 10px auto 20px auto;
+    background: rgba(0,0,0,.2);
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+}
+
+/* ****************************************************************************** * Emplacement de texte.
+ ****************************************************************************** */
+.form-wrapper input {
+    width: 330px;
+    height: 20px;
+    padding: 10px 5px;
+    float: left;    
+    font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    border: 0;
+    background: #eee;
+    border-radius: 3px 0 0 3px;      
+}
+ 
+.form-wrapper input:focus {
+    outline: 0;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+ 
+.form-wrapper input::-webkit-input-placeholder {
+   color: #999;
+   font-weight: normal;
+   font-style: italic;
+}
+ 
+.form-wrapper input:-moz-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+ 
+.form-wrapper input:-ms-input-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}    
+ 
+/* Form submit button */
+.form-wrapper button {
+    overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    color: #fff;
+    text-transform: uppercase;
+    background: #4E9CF7;
+    border-radius: 0 3px 3px 0;      
+    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+}   
+   
+.form-wrapper button:hover{     
+    background: #90BDF1;
+}   
+   
+.form-wrapper button:active,
+.form-wrapper button:focus{   
+    background: #4E9CF7;
+    outline: 0;   
+}
+ 
+.form-wrapper button:before { /* left arrow */
+    content: '';
+    position: absolute;
+    border-width: 8px 8px 8px 0;
+    border-style: solid solid solid none;
+    border-color: transparent #4E9CF7 transparent;
+    top: 12px;
+    left: -6px;
+}
+ 
+.form-wrapper button:hover:before{
+    border-right-color: #90BDF1;
+}
+ 
+.form-wrapper button:focus:before,
+.form-wrapper button:active:before{
+        border-right-color: #4E9CF7;
+}      
+ 
+.form-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
+    border: 0;
+    padding: 0;
+}    

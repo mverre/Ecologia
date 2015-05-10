@@ -104,13 +104,14 @@ function calClick(dateStr, id){
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             //Gérer la réponse :
             //console.log(xmlhttp.responseText);
-            if(document.getElementById("information")==undefined){
+            /*if(document.getElementById("information")==undefined){
                 var elt = document.createElement("ul");
                 elt.setAttribute("id","information");
                 //document.getElementById("calendarMain").appendChild(elt);
                 document.getElementById("calendarMain").insertBefore(elt,document.getElementById("calendarMain").firstChild);
-            }
+            }*/
             document.getElementById("information").innerHTML=xmlhttp.responseText;
+            document.getElementById("requete").style.display = "none";
             //window.scrollBy(document.getElementById("calendarWrap0").height,0);
         }
     };

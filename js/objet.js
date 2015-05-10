@@ -24,14 +24,15 @@ function AffichePlante2(str) {
         xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("txtHint").innerHTML = xmlhttp.responseText + "<button onclick='RetourPlante2()'>Retour</button>";
-                document.getElementById("txtHint").style.display = "block";
+                document.getElementById("requete").innerHTML = xmlhttp.responseText + "<button onclick='RetourPlante2()'>Retour</button>";
+                document.getElementById("requete").style.display = "block";
             }
         };
         xmlhttp.open("GET", "affPlantes.php?q=  " + str, true);
         xmlhttp.send();
     }
         document.getElementById("calendarID").style.display = "none";
+    document.getElementById("information").style.display = "none";
 }
 
 function AffichePlanteNom() {
@@ -39,7 +40,7 @@ function AffichePlanteNom() {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            document.getElementById("txtHint").innerHTML = xmlhttp.responseText + "<button onclick='RetourPlante()'>Retour</button>";
+            document.getElementById("requete").innerHTML = xmlhttp.responseText + "<button onclick='RetourPlante()'>Retour</button>";
             document.getElementById("txtHint").style.display = "block";
         }
     };
@@ -88,8 +89,9 @@ function RetourPlante(){
 }
 
 function RetourPlante2(){
-    document.getElementById("txtHint").style.display = "none";
+    document.getElementById("requete").style.display = "none";
     document.getElementById("calendarID").style.display = "inline";
+    document.getElementById("information").style.display = "block";
 }
 
 /*
