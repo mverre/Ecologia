@@ -30,7 +30,7 @@
             </div>   
             
             <div id="plantes">
-                <ul>
+                <ul id="listaff">
                     <?php
                         $bdd = mysqli_connect('localhost','root','','ecologia');
 
@@ -40,7 +40,7 @@
 
                         while($row = mysqli_fetch_array($result)) {
                             echo "<li onclick='AffichePlante(".$row['id'].")'>
-                                    <img src=".$row['Image'].">
+                                    <img style='width:200px;' src=".$row['Image'].">
                                     <h3>".$row['Nom']."</h3>
                                     <p>".$row['Description']."</p>
                                   </li>";

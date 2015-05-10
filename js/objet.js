@@ -1,3 +1,11 @@
+document.getElementById("Recherche").addEventListener('keydown', doKeyDown, true);
+
+function doKeyDown(e){ 
+    if (e.keyCode == 13) {
+        AffichePlanteNom();
+	}
+}
+
 function AffichePlante(str) {
     if (str == "") {
         document.getElementById("txtHint").innerHTML = "";
@@ -40,13 +48,13 @@ function AffichePlanteNom() {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            document.getElementById("requete").innerHTML = xmlhttp.responseText + "<button onclick='RetourPlante()'>Retour</button>";
-            document.getElementById("txtHint").style.display = "block";
+            document.getElementById("listaff").innerHTML = xmlhttp.responseText;
+            document.getElementById("listaff").style.display = "block";
         }
     };
     xmlhttp.open("GET", "affNom.php?q=" + NomPlante , true);
     xmlhttp.send();
-    document.getElementById("plantes").style.display = "none";
+    document.getElementById("txtHint").style.display = "none";
 }
 
 function AfficheListe(str,day,month,type,climat) {
